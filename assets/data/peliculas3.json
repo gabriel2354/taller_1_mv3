@@ -1,0 +1,1404 @@
+{
+  "peliculas": [
+    {
+      "id": "MOV001",
+      "titulo": "Origen",
+    "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
+
+      "genero": [
+        "Ciencia Ficción",
+        "Thriller"
+      ],
+      "director": "Christopher Nolan",
+      "precio": {
+        "moneda": "USD",
+        "real": 14.99
+      },
+      "lanzamiento": "16 de julio de 2010",
+      "anio": 2010,
+      "descripcion": "Un ladrón que roba secretos corporativos mediante el uso de la tecnología de compartir sueños recibe la tarea inversa de plantar una idea en la mente de un CEO.",
+      "imagen": "assets/images/origen.jpg"
+,
+      "valoracion": 8.0,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Una obra maestra del cine moderno.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "Skywalker99",
+                "fecha": "2023-08-15",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "Increíblemente innovadora y emocionante.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "NeoTheChosen",
+                "fecha": "2023-07-10",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "Una película que te hace pensar, me encanta.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "DarkKnightX",
+                "fecha": "2023-06-02",
+                "puntuacion": 8
+              }
+            },
+            {
+              "opinion": "Nolan en su mejor momento, la mejor película de ciencia ficción.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "CineMaster2000",
+                "fecha": "2023-09-18",
+                "puntuacion": 9
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Demasiado complicada para seguir, no me atrapó.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "LostInSpace33",
+                "fecha": "2023-05-28",
+                "puntuacion": 4
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV002",
+      "titulo": "El Caballero Oscuro",
+      "genero": [
+        "Acción",
+        "Superhéroes"
+      ],
+      "director": "Christopher Nolan",
+      "precio": {
+        "moneda": "USD",
+        "real": 12.99
+      },
+      "lanzamiento": "18 de julio de 2008",
+      "anio": 2008,
+      "descripcion": "Cuando la amenaza conocida como el Joker causa estragos y caos en la ciudad de Gotham, Batman debe enfrentarlo para luchar contra la injusticia.",
+      "imagen": "assets/images/caballero_oscuro.jpg",
+      "valoracion": 9.3,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 5,
+          "detalles": [
+            {
+              "opinion": "Una de las mejores películas de superhéroes.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "DarkHero24",
+                "fecha": "2023-05-20",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "El Joker de Heath Ledger es inigualable.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "JokerFan32",
+                "fecha": "2023-06-11",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "La acción es impresionante y la trama es profunda.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "GothamKnight",
+                "fecha": "2023-07-30",
+                "puntuacion": 9
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 0,
+          "detalles": []
+        }
+      }
+    },
+    {
+      "id": "MOV003",
+      "titulo": "Interstellar",
+      "genero": [
+        "Ciencia Ficción",
+        "Drama"
+      ],
+      "director": "Christopher Nolan",
+      "precio": {
+        "moneda": "USD",
+        "real": 13.50
+      },
+      "lanzamiento": "7 de noviembre de 2014",
+      "anio": 2014,
+      "descripcion": "Un grupo de exploradores viaja a través de un agujero de gusano en el espacio para asegurar la supervivencia de la humanidad.",
+      "imagen": "assets/images/interstellar.jpeg",
+      "valoracion": 8.9,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 3,
+          "detalles": [
+            {
+              "opinion": "Una mezcla perfecta de ciencia y emoción.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "SpaceTraveler21",
+                "fecha": "2023-03-17",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "Es visualmente espectacular.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "CosmosFanatic",
+                "fecha": "2023-02-20",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "La historia es increíblemente conmovedora.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "TimeBender33",
+                "fecha": "2023-01-09",
+                "puntuacion": 8
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Un poco confusa en algunos momentos.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "LostInTime",
+                "fecha": "2023-04-12",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV004",
+      "titulo": "La La Land",
+      "genero": [
+        "Musical",
+        "Romance"
+      ],
+      "director": "Damien Chazelle",
+      "precio": {
+        "moneda": "USD",
+        "real": 11.99
+      },
+      "lanzamiento": "9 de diciembre de 2016",
+      "anio": 2016,
+      "descripcion": "En Los Angeles, un pianista de jazz y una aspirante a actriz se enamoran mientras persiguen sus sueños.",
+      "imagen": "assets/images/la_la_land.jpeg",
+      "valoracion": 8.5,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Hermosa historia y una banda sonora increíble.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "JazzLover55",
+                "fecha": "2023-08-25",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "Una película visualmente impresionante.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "DreamChaser",
+                "fecha": "2023-07-11",
+                "puntuacion": 8
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "El final no fue lo que esperaba.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "HopefulArtist",
+                "fecha": "2023-06-15",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV005",
+      "titulo": "El Padrino",
+      "genero": [
+        "Drama",
+        "Crimen"
+      ],
+      "director": "Francis Ford Coppola",
+      "precio": {
+        "moneda": "USD",
+        "real": 15.99
+      },
+      "lanzamiento": "24 de marzo de 1972",
+      "anio": 1972,
+      "descripcion": "El patriarca de una familia mafiosa intenta transferir su imperio criminal a su hijo reticente.",
+      "imagen": "assets/images/el_padrino.jpeg",
+      "valoracion": 9.5,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 3,
+          "detalles": [
+            {
+              "opinion": "Una obra maestra del cine.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "GodfatherFan123",
+                "fecha": "2023-03-22",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "Actuaciones brillantes y una historia poderosa.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "DonCorleone34",
+                "fecha": "2023-04-14",
+                "puntuacion": 9
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Un poco lenta en algunas partes.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "SlowPaceFan",
+                "fecha": "2023-05-05",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV006",
+      "titulo": "Gladiador",
+      "genero": [
+        "Acción",
+        "Drama"
+      ],
+      "director": "Ridley Scott",
+      "precio": {
+        "moneda": "USD",
+        "real": 12.99
+      },
+      "lanzamiento": "5 de mayo de 2000",
+      "anio": 2000,
+      "descripcion": "Un general romano traicionado lucha como gladiador para vengar la muerte de su familia y su emperador.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/gladiador.jpg",
+      "valoracion": 9.0,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 3,
+          "detalles": [
+            {
+              "opinion": "Una película épica con una historia poderosa.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "Maximus3000",
+                "fecha": "2023-05-10",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "Russell Crowe está increíble en este papel.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "SpartacusFan",
+                "fecha": "2023-04-19",
+                "puntuacion": 10
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Algunas partes se sintieron lentas.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "RomanWarrior21",
+                "fecha": "2023-03-30",
+                "puntuacion": 8
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV007",
+      "titulo": "Matrix",
+      "genero": [
+        "Ciencia Ficción",
+        "Acción"
+      ],
+      "director": "The Wachowskis",
+      "precio": {
+        "moneda": "USD",
+        "real": 14.50
+      },
+      "lanzamiento": "31 de marzo de 1999",
+      "anio": 1999,
+      "descripcion": "Un hacker descubre que la realidad que experimenta es una simulación controlada por una inteligencia artificial.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/matrix.jpg",
+      "valoracion": 9.5,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Una revolución en efectos visuales y trama.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "TheOneNeo",
+                "fecha": "2023-08-21",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "Un clásico del cine de ciencia ficción.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "HackerKing007",
+                "fecha": "2023-07-13",
+                "puntuacion": 9
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Un poco confusa al principio.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "LostInCode",
+                "fecha": "2023-06-05",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV008",
+      "titulo": "Avatar",
+      "genero": [
+        "Ciencia Ficción",
+        "Aventura"
+      ],
+      "director": "James Cameron",
+      "precio": {
+        "moneda": "USD",
+        "real": 15.99
+      },
+      "lanzamiento": "18 de diciembre de 2009",
+      "anio": 2009,
+      "descripcion": "Un marine parapléjico es enviado a la luna Pandora, donde se une a los Na'vi y lucha para salvar su mundo.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/avatar.jpg",
+      "valoracion": 8.8,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Visualmente impresionante, una obra maestra.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "PandoraExplorer",
+                "fecha": "2023-04-14",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "Increíble combinación de tecnología y naturaleza.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "TreeOfSouls",
+                "fecha": "2023-03-25",
+                "puntuacion": 10
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "La historia es predecible.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "NaaviDoubt",
+                "fecha": "2023-05-05",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV009",
+      "titulo": "Pulp Fiction",
+      "genero": [
+        "Crimen",
+        "Drama"
+      ],
+      "director": "Quentin Tarantino",
+      "precio": {
+        "moneda": "USD",
+        "real": 13.75
+      },
+      "lanzamiento": "14 de octubre de 1994",
+      "anio": 1994,
+      "descripcion": "Varias historias de criminales entrelazadas en un mundo lleno de violencia, humor negro y diálogos memorables.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/pulp_fiction.jpg",
+      "valoracion": 9.6,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Una obra maestra del cine moderno.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "TarantinoLover",
+                "fecha": "2023-02-19",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "Diálogos impresionantes y personajes inolvidables.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "VegaVincent",
+                "fecha": "2023-01-15",
+                "puntuacion": 9
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Un poco larga para mi gusto.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "SlowPaceGuy",
+                "fecha": "2023-03-10",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV010",
+      "titulo": "Forrest Gump",
+      "genero": [
+        "Drama",
+        "Comedia"
+      ],
+      "director": "Robert Zemeckis",
+      "precio": {
+        "moneda": "USD",
+        "real": 12.49
+      },
+      "lanzamiento": "6 de julio de 1994",
+      "anio": 1994,
+      "descripcion": "La extraordinaria vida de Forrest Gump, un hombre con un bajo coeficiente intelectual que impacta eventos históricos del siglo XX.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/forrest_gump.jpg",
+      "valoracion": 9.2,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Una historia conmovedora y llena de corazón.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "RunForrestRun",
+                "fecha": "2023-01-30",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "Tom Hanks está increíble en esta película.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "LifeIsLikeBoxOfChocolates",
+                "fecha": "2023-03-14",
+                "puntuacion": 9
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Algunas partes son demasiado sentimentales.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "SentimentalOverload",
+                "fecha": "2023-04-22",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV011",
+      "titulo": "El Señor de los Anillos: La Comunidad del Anillo",
+      "genero": [
+        "Fantasía",
+        "Aventura"
+      ],
+      "director": "Peter Jackson",
+      "precio": {
+        "moneda": "USD",
+        "real": 15.99
+      },
+      "lanzamiento": "19 de diciembre de 2001",
+      "anio": 2001,
+      "descripcion": "Un joven hobbit emprende un viaje épico para destruir un anillo mágico que podría traer la destrucción al mundo.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/lotr_comunidad.jpg",
+      "valoracion": 9.7,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 5,
+          "detalles": [
+            {
+              "opinion": "Una obra maestra épica en todos los sentidos.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "RingBearer09",
+                "fecha": "2023-06-14",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "Un viaje increíble por la Tierra Media.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "FrodoLives",
+                "fecha": "2023-05-30",
+                "puntuacion": 9
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Un poco larga para mi gusto.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "ShireWanderer",
+                "fecha": "2023-03-18",
+                "puntuacion": 8
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV012",
+      "titulo": "Star Wars: Episodio V - El Imperio Contraataca",
+      "genero": [
+        "Ciencia Ficción",
+        "Aventura"
+      ],
+      "director": "Irvin Kershner",
+      "precio": {
+        "moneda": "USD",
+        "real": 14.99
+      },
+      "lanzamiento": "21 de mayo de 1980",
+      "anio": 1980,
+      "descripcion": "Los rebeldes luchan contra el Imperio Galáctico mientras Luke Skywalker recibe entrenamiento Jedi y descubre su verdadero origen.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/star_wars_v.jpg",
+      "valoracion": 9.4,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "La mejor película de Star Wars sin duda.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "DarthVaderFan",
+                "fecha": "2023-05-22",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "Una obra maestra en la ciencia ficción.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "ForceWielder",
+                "fecha": "2023-06-19",
+                "puntuacion": 9
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Algo sobrevalorada a mi parecer.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "RebelDoubter",
+                "fecha": "2023-07-03",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV013",
+      "titulo": "Jurassic Park",
+      "genero": [
+        "Aventura",
+        "Ciencia Ficción"
+      ],
+      "director": "Steven Spielberg",
+      "precio": {
+        "moneda": "USD",
+        "real": 13.50
+      },
+      "lanzamiento": "11 de junio de 1993",
+      "anio": 1993,
+      "descripcion": "Un parque temático de dinosaurios clonados se convierte en un caos cuando las criaturas se escapan y amenazan a los visitantes.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/jurassic_park.jpg",
+      "valoracion": 8.9,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 3,
+          "detalles": [
+            {
+              "opinion": "¡Los efectos visuales siguen siendo increíbles!",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "DinoLover",
+                "fecha": "2023-04-14",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "Una película que marcó mi infancia.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "TyrannoRex",
+                "fecha": "2023-02-10",
+                "puntuacion": 10
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Buena película, pero la trama es simple.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "SimplePlotHater",
+                "fecha": "2023-01-30",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV014",
+      "titulo": "Titanic",
+      "genero": [
+        "Romance",
+        "Drama"
+      ],
+      "director": "James Cameron",
+      "precio": {
+        "moneda": "USD",
+        "real": 12.99
+      },
+      "lanzamiento": "19 de diciembre de 1997",
+      "anio": 1997,
+      "descripcion": "Una trágica historia de amor entre un joven artista y una rica heredera a bordo del Titanic, que choca contra un iceberg.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/titanic.jpg",
+      "valoracion": 9.1,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Una historia de amor épica con un final trágico.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "HeartOfTheOcean",
+                "fecha": "2023-02-14",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "Una película increíblemente emotiva.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "IcebergAvoider",
+                "fecha": "2023-01-25",
+                "puntuacion": 9
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Demasiado larga para mi gusto.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "LongMovieHater",
+                "fecha": "2023-03-08",
+                "puntuacion": 8
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV015",
+      "titulo": "Toy Story",
+      "genero": [
+        "Animación",
+        "Aventura"
+      ],
+      "director": "John Lasseter",
+      "precio": {
+        "moneda": "USD",
+        "real": 11.99
+      },
+      "lanzamiento": "22 de noviembre de 1995",
+      "anio": 1995,
+      "descripcion": "Los juguetes de un niño cobran vida cuando no hay humanos alrededor y se embarcan en aventuras increíbles.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/toy_story.jpg",
+      "valoracion": 9.3,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 3,
+          "detalles": [
+            {
+              "opinion": "Un clásico de la animación que nunca envejece.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "BuzzFan99",
+                "fecha": "2023-01-05",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "Una historia hermosa y llena de imaginación.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "WoodyLover",
+                "fecha": "2023-03-01",
+                "puntuacion": 9
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "No es tan divertida para los adultos.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "AdultToys",
+                "fecha": "2023-04-02",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV016",
+      "titulo": "Inglourious Basterds",
+      "genero": [
+        "Acción",
+        "Drama",
+        "Guerra"
+      ],
+      "director": "Quentin Tarantino",
+      "precio": {
+        "moneda": "USD",
+        "real": 13.99
+      },
+      "lanzamiento": "21 de agosto de 2009",
+      "anio": 2009,
+      "descripcion": "Un grupo de soldados judíos-americanos planea asesinar a altos oficiales nazis durante la Segunda Guerra Mundial en la Francia ocupada.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/inglourious_basterds.jpg",
+      "valoracion": 8.8,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Una combinación perfecta de acción y diálogos brillantes.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "BasterdFan",
+                "fecha": "2023-05-10",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "Una de las mejores películas de Tarantino.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "CinemaLover22",
+                "fecha": "2023-06-14",
+                "puntuacion": 10
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Algo exagerada en algunas escenas.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "HistorianCritic",
+                "fecha": "2023-03-30",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV017",
+      "titulo": "Mad Max: Fury Road",
+      "genero": [
+        "Acción",
+        "Aventura"
+      ],
+      "director": "George Miller",
+      "precio": {
+        "moneda": "USD",
+        "real": 12.50
+      },
+      "lanzamiento": "15 de mayo de 2015",
+      "anio": 2015,
+      "descripcion": "En un desierto postapocalíptico, Max se une a una rebelde llamada Furiosa para escapar de un tirano y restaurar el orden en el caos.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/mad_max_fury_road.jpg",
+      "valoracion": 9.1,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Acción incesante y visualmente deslumbrante.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "RoadWarrior78",
+                "fecha": "2023-07-18",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "La mejor película de acción de la década.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "MaxFanatic",
+                "fecha": "2023-06-11",
+                "puntuacion": 9
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "El argumento es un poco simple.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "PlotHunter",
+                "fecha": "2023-08-01",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV018",
+      "titulo": "The Social Network",
+      "genero": [
+        "Drama",
+        "Biografía"
+      ],
+      "director": "David Fincher",
+      "precio": {
+        "moneda": "USD",
+        "real": 10.99
+      },
+      "lanzamiento": "1 de octubre de 2010",
+      "anio": 2010,
+      "descripcion": "La historia de cómo Mark Zuckerberg creó Facebook y las luchas legales y personales que surgieron a partir de su éxito.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/social_network.jpg",
+      "valoracion": 8.5,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 3,
+          "detalles": [
+            {
+              "opinion": "Una película fascinante sobre la tecnología moderna.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "TechGuru",
+                "fecha": "2023-04-28",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "Gran guion y actuaciones sobresalientes.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "CodeMaster",
+                "fecha": "2023-03-12",
+                "puntuacion": 8
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Un poco lenta en algunas partes.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "SlowPacer",
+                "fecha": "2023-02-18",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV019",
+      "titulo": "Coco",
+      "genero": [
+        "Animación",
+        "Aventura"
+      ],
+      "director": "Lee Unkrich",
+      "precio": {
+        "moneda": "USD",
+        "real": 11.50
+      },
+      "lanzamiento": "22 de noviembre de 2017",
+      "anio": 2017,
+      "descripcion": "Un joven músico se embarca en una extraordinaria aventura en la Tierra de los Muertos para descubrir la verdad sobre su familia.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/coco.jpg",
+      "valoracion": 9.3,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Una película hermosa sobre la familia y la cultura.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "GuitarLover",
+                "fecha": "2023-05-05",
+                "puntuacion": 10
+              }
+            },
+            {
+              "opinion": "Visualmente impresionante y emocionalmente profunda.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "MiguelFan",
+                "fecha": "2023-06-07",
+                "puntuacion": 9
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Se siente un poco predecible en algunas partes.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "FamilyCritic",
+                "fecha": "2023-04-20",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV020",
+      "titulo": "Blade Runner 2049",
+      "genero": [
+        "Ciencia Ficción",
+        "Thriller"
+      ],
+      "director": "Denis Villeneuve",
+      "precio": {
+        "moneda": "USD",
+        "real": 13.50
+      },
+      "lanzamiento": "6 de octubre de 2017",
+      "anio": 2017,
+      "descripcion": "Un oficial busca respuestas sobre su propia identidad mientras desvela un secreto que podría cambiar el futuro de la humanidad.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/blade_runner_2049.jpg",
+      "valoracion": 8.6,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 3,
+          "detalles": [
+            {
+              "opinion": "Visualmente espectacular y atmosférica.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "FutureSeeker",
+                "fecha": "2023-05-09",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "Una digna secuela del clásico.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "ReplicantHunter",
+                "fecha": "2023-06-15",
+                "puntuacion": 8
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Algo lenta y compleja en algunas partes.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "SlowBlade",
+                "fecha": "2023-03-21",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV021",
+      "titulo": "Black Panther",
+      "genero": [
+        "Acción",
+        "Ciencia Ficción",
+        "Superhéroes"
+      ],
+      "director": "Ryan Coogler",
+      "precio": {
+        "moneda": "USD",
+        "real": 12.99
+      },
+      "lanzamiento": "16 de febrero de 2018",
+      "anio": 2018,
+      "descripcion": "T'Challa, el rey de Wakanda, debe defender su reino de un adversario que pone en peligro el destino del mundo.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/black_panther.jpg",
+      "valoracion": 8.4,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Una película revolucionaria y culturalmente importante.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "WakandaForever",
+                "fecha": "2023-08-01",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "Increíbles efectos especiales y un gran mensaje.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "PantherKing",
+                "fecha": "2023-07-10",
+                "puntuacion": 8
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Un poco sobrevalorada en mi opinión.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "MarvelCritic",
+                "fecha": "2023-06-05",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV022",
+      "titulo": "The Dark Knight Rises",
+      "genero": [
+        "Acción",
+        "Superhéroes"
+      ],
+      "director": "Christopher Nolan",
+      "precio": {
+        "moneda": "USD",
+        "real": 14.99
+      },
+      "lanzamiento": "20 de julio de 2012",
+      "anio": 2012,
+      "descripcion": "Batman debe enfrentar una nueva amenaza, el terrorista Bane, que pone a Gotham City al borde de la destrucción.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/dark_knight_rises.jpg",
+      "valoracion": 8.7,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Una conclusión épica para la trilogía de Nolan.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "GothamProtector",
+                "fecha": "2023-04-18",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "Bane es un villano formidable y aterrador.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "DarkKnightLoyal",
+                "fecha": "2023-05-05",
+                "puntuacion": 8
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Se siente un poco larga en algunas partes.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "LongMovieCritic",
+                "fecha": "2023-06-02",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV023",
+      "titulo": "The Revenant",
+      "genero": [
+        "Drama",
+        "Aventura"
+      ],
+      "director": "Alejandro G. Iñárritu",
+      "precio": {
+        "moneda": "USD",
+        "real": 11.99
+      },
+      "lanzamiento": "25 de diciembre de 2015",
+      "anio": 2015,
+      "descripcion": "Un explorador lucha por sobrevivir después de ser atacado por un oso y ser dejado por muerto por su equipo de expedición.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/the_revenant.jpg",
+      "valoracion": 8.9,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Una historia brutal de supervivencia con paisajes impresionantes.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "SurvivorFan",
+                "fecha": "2023-07-01",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "DiCaprio está increíble en esta película.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "LeoFanatic",
+                "fecha": "2023-06-12",
+                "puntuacion": 10
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Un poco lenta en algunas partes.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "SlowPacer",
+                "fecha": "2023-05-09",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MOV024",
+      "titulo": "Bohemian Rhapsody",
+      "genero": [
+        "Drama",
+        "Biografía",
+        "Música"
+      ],
+      "director": "Bryan Singer",
+      "precio": {
+        "moneda": "USD",
+        "real": 13.50
+      },
+      "lanzamiento": "2 de noviembre de 2018",
+      "anio": 2018,
+      "descripcion": "La historia de la legendaria banda Queen y su icónico vocalista Freddie Mercury.",
+      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/bohemian_rhapsody.jpg",
+      "valoracion": 8.6,
+      "opiniones": {
+        "opiniones_positivas": {
+          "cantidad": 4,
+          "detalles": [
+            {
+              "opinion": "Una celebración increíble de la música de Queen.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "FreddieFan",
+                "fecha": "2023-05-25",
+                "puntuacion": 9
+              }
+            },
+            {
+              "opinion": "Rami Malek ofrece una actuación brillante.",
+              "sentimiento": "positivo",
+              "detalles_usuario": {
+                "usuario": "QueenLover",
+                "fecha": "2023-04-10",
+                "puntuacion": 8
+              }
+            }
+          ]
+        },
+        "opiniones_negativas": {
+          "cantidad": 1,
+          "detalles": [
+            {
+              "opinion": "Algunas partes se sienten apresuradas.",
+              "sentimiento": "negativo",
+              "detalles_usuario": {
+                "usuario": "BiopicCritic",
+                "fecha": "2023-06-08",
+                "puntuacion": 7
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
