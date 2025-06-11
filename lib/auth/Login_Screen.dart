@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final nameController = TextEditingController();
     final emailController = TextEditingController();
     final passwordController = TextEditingController();
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Registrarse'),
+        title: const Text('Iniciar Sesión'),
         backgroundColor: Colors.deepPurple,
         centerTitle: true,
       ),
@@ -19,25 +19,16 @@ class RegisterScreen extends StatelessWidget {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           children: [
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
             const Text(
-              'Crea tu cuenta ',
+              'Bienvenido de nuevo 🎥',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 16),
-            TextField(
-              controller: nameController,
-              decoration: const InputDecoration(
-                labelText: 'Nombre de usuario',
-                prefixIcon: Icon(Icons.person),
-                border: OutlineInputBorder(),
-              ),
             ),
             const SizedBox(height: 16),
             TextField(
               controller: emailController,
               decoration: const InputDecoration(
-                labelText: 'Correo electrónico',
+                labelText: 'Correo Electrónico',
                 prefixIcon: Icon(Icons.email),
                 border: OutlineInputBorder(),
               ),
@@ -59,15 +50,22 @@ class RegisterScreen extends StatelessWidget {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(vertical: 16),
-                  backgroundColor: Colors.deepPurple,
+                  backgroundColor: Colors.deepPurpleAccent,
                 ),
                 onPressed: () {
-                  // Simular registro
-                  Navigator.pop(context); // regresar al login
+                  // Simular login
+                  Navigator.pushReplacementNamed(context, '/home'); // <-- futura pantalla
                 },
-                child: const Text('Registrarme'),
+                child: const Text('Ingresar'),
               ),
             ),
+            const SizedBox(height: 12),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/register');
+              },
+              child: const Text('¿No tienes cuenta? Regístrate'),
+            )
           ],
         ),
       ),
