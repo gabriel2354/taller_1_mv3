@@ -75,18 +75,73 @@ class RegisterScreen extends StatelessWidget {
   }
 }
 
-Future<void> registrarse(String correo, String contrasenia, context) async {
+Future<void> registrarse(String correo, String contrasenia, BuildContext context) async {
+  // Validar campos vacíos
+  if (correo.isEmpty || contrasenia.isEmpty) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Campos vacíos'),
+        content: const Text('Por favor, llena todos los campos para registrarte.'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+    return; // Salir sin continuar el registro
+  }
+
   try {
     final credential = await FirebaseAuth.instance
         .createUserWithEmailAndPassword(email: correo, password: contrasenia);
-    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+
+    // Si se registra con éxito, mostrar mensaje de éxito
+    await showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('¡Registro exitoso!'),
+        content: Text('Gracias por registrarte, ${credential.user?.email ?? 'usuario'}'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context); // Cerrar el diálogo
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => LoginScreen()),
+              );
+            },
+            child: const Text('Continuar'),
+          ),
+        ],
+      ),
+    );
   } on FirebaseAuthException catch (e) {
+    String mensaje = '';
     if (e.code == 'weak-password') {
-      print('The password provided is too weak.');
+      mensaje = 'La contraseña es demasiado débil.';
     } else if (e.code == 'email-already-in-use') {
-      print('The account already exists for that email.');
+      mensaje = 'Ya existe una cuenta con ese correo.';
+    } else {
+      mensaje = 'Ocurrió un error: ${e.message}';
     }
+
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Error de registro'),
+        content: Text(mensaje),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
   } catch (e) {
-    print(e);
+    print(e); // Para debug
   }
 }

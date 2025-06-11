@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:taller_1_mv3/screens/Home_Screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -53,21 +54,103 @@ class LoginScreen extends StatelessWidget {
                   backgroundColor: Colors.deepPurpleAccent,
                 ),
                 onPressed: () {
-                  // Simular login
-                  Navigator.pushReplacementNamed(context, '/home'); // <-- futura pantalla
+                  // Solo llama la función, sin navegar aquí
+                    loginFire(
+                    emailController.text,
+                    passwordController.text,
+                    context,
+                  );
                 },
                 child: const Text('Ingresar'),
               ),
             ),
+
             const SizedBox(height: 12),
             TextButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/register');
               },
               child: const Text('¿No tienes cuenta? Regístrate'),
-            )
+            ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+Future<void> loginFire(String correo, String contrasenia, BuildContext context) async {
+  // Validar si los campos están vacíos
+  if (correo.isEmpty || contrasenia.isEmpty) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Campos incompletos'),
+        content: const Text('Por favor, completa todos los campos.'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+    return;
+  }
+
+  try {
+    final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: correo,
+      password: contrasenia,
+    );
+
+    final user = credential.user;
+
+    if (user != null) {
+      // Mostrar mensaje de bienvenida
+      await showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('¡Bienvenido!'),
+          content: Text('Hola, ${user.email ?? 'usuario'}'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context); // Cerrar el diálogo
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                );
+              },
+              child: const Text('Continuar'),
+            ),
+          ],
+        ),
+      );
+    }
+
+  } on FirebaseAuthException catch (e) {
+    String mensaje = '';
+    if (e.code == 'user-not-found') {
+      mensaje = 'No se encontró un usuario con ese correo.';
+    } else if (e.code == 'wrong-password') {
+      mensaje = 'La contraseña es incorrecta.';
+    } else {
+      mensaje = 'Error al iniciar sesión: ${e.message}';
+    }
+
+    // Mostrar mensaje de error
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Error'),
+        content: Text(mensaje),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('OK'),
+          ),
+        ],
       ),
     );
   }
