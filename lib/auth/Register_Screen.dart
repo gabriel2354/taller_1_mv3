@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:taller_1_mv3/auth/login_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final nameController = TextEditingController();
-    final emailController = TextEditingController();
-    final passwordController = TextEditingController();
+    final _nombre = TextEditingController();
+    final _correo = TextEditingController();
+    final _contrasenia = TextEditingController();
 
     return Scaffold(
       appBar: AppBar(
@@ -27,7 +28,7 @@ class RegisterScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             TextField(
-              controller: nameController,
+              controller: _nombre,
               decoration: const InputDecoration(
                 labelText: 'Nombre de usuario',
                 prefixIcon: Icon(Icons.person),
@@ -36,7 +37,7 @@ class RegisterScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             TextField(
-              controller: emailController,
+              controller: _correo,
               decoration: const InputDecoration(
                 labelText: 'Correo electrónico',
                 prefixIcon: Icon(Icons.email),
@@ -46,7 +47,7 @@ class RegisterScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             TextField(
-              controller: passwordController,
+              controller: _contrasenia,
               obscureText: true,
               decoration: const InputDecoration(
                 labelText: 'Contraseña',
@@ -62,16 +63,30 @@ class RegisterScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   backgroundColor: Colors.deepPurple,
                 ),
-                onPressed: () {
-                  // Simular registro
-                  Navigator.pop(context); // regresar al login
-                },
-                child: const Text('Registrarme'),
+                onPressed:
+              () => registrarse(_correo.text, _contrasenia.text, context),
+          child: Text("Registro"),
               ),
             ),
           ],
         ),
       ),
     );
+  }
+}
+
+Future<void> registrarse(String correo, String contrasenia, context) async {
+  try {
+    final credential = await FirebaseAuth.instance
+        .createUserWithEmailAndPassword(email: correo, password: contrasenia);
+    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+  } on FirebaseAuthException catch (e) {
+    if (e.code == 'weak-password') {
+      print('The password provided is too weak.');
+    } else if (e.code == 'email-already-in-use') {
+      print('The account already exists for that email.');
+    }
+  } catch (e) {
+    print(e);
   }
 }
