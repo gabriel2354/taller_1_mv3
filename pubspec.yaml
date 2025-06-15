@@ -13,6 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
   url_launcher: ^6.2.5
+  video_player: ^2.7.0
   
 
 dev_dependencies:

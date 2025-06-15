@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -20,7 +21,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Navigator.pushReplacementNamed(context, '/home');
         break;
       case 1:
-        // Ya estás aquí
         break;
       case 2:
         Navigator.pushReplacementNamed(context, '/settings');
@@ -30,6 +30,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser;
+
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
@@ -43,14 +45,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Center(
               child: CircleAvatar(
                 radius: 60,
-                backgroundImage: const AssetImage('assets/images/welcome.jpeg'),
+                backgroundImage: user?.photoURL != null
+                    ? NetworkImage(user!.photoURL!)
+                    : const AssetImage('assets/images/welcome.jpeg') as ImageProvider,
               ),
             ),
             const SizedBox(height: 16),
-            const Text("Usuario Ejemplo",
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-            const Text("usuario@correo.com",
-                style: TextStyle(fontSize: 16, color: Colors.grey)),
+            Text(
+              user?.displayName ?? 'Usuario',
+              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              user?.email ?? 'correo@desconocido.com',
+              style: const TextStyle(fontSize: 16, color: Colors.grey),
+            ),
             const SizedBox(height: 20),
             Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -92,7 +100,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 10),
             OutlinedButton.icon(
-              onPressed: () {
+              onPressed: () async {
+                await FirebaseAuth.instance.signOut();
                 Navigator.pushReplacementNamed(context, '/');
               },
               icon: const Icon(Icons.logout),

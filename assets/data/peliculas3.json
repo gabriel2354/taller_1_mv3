@@ -3,7 +3,9 @@
     {
       "id": "MOV001",
       "titulo": "Origen",
-    "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
+    "trailer": "https://pixeldrain.com/api/file/xvGAkjyL",
+    "video_url": "https://pixeldrain.com/api/file/5R61wB9c",
+
 
       "genero": [
         "Ciencia Ficción",
@@ -81,6 +83,7 @@
     {
       "id": "MOV002",
       "titulo": "El Caballero Oscuro",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Acción",
         "Superhéroes"
@@ -137,6 +140,7 @@
     {
       "id": "MOV003",
       "titulo": "Interstellar",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Ciencia Ficción",
         "Drama"
@@ -203,6 +207,7 @@
     {
       "id": "MOV004",
       "titulo": "La La Land",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Musical",
         "Romance"
@@ -260,6 +265,7 @@
     {
       "id": "MOV005",
       "titulo": "El Padrino",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Drama",
         "Crimen"
@@ -317,6 +323,7 @@
     {
       "id": "MOV006",
       "titulo": "Gladiador",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Acción",
         "Drama"
@@ -329,7 +336,7 @@
       "lanzamiento": "5 de mayo de 2000",
       "anio": 2000,
       "descripcion": "Un general romano traicionado lucha como gladiador para vengar la muerte de su familia y su emperador.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/gladiador.jpg",
+      "imagen": "assets/images/gladiador.jpg",
       "valoracion": 9.0,
       "opiniones": {
         "opiniones_positivas": {
@@ -374,6 +381,7 @@
     {
       "id": "MOV007",
       "titulo": "Matrix",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Ciencia Ficción",
         "Acción"
@@ -386,7 +394,7 @@
       "lanzamiento": "31 de marzo de 1999",
       "anio": 1999,
       "descripcion": "Un hacker descubre que la realidad que experimenta es una simulación controlada por una inteligencia artificial.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/matrix.jpg",
+      "imagen": "assets/images/matrix.jpg",
       "valoracion": 9.5,
       "opiniones": {
         "opiniones_positivas": {
@@ -431,6 +439,7 @@
     {
       "id": "MOV008",
       "titulo": "Avatar",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Ciencia Ficción",
         "Aventura"
@@ -443,7 +452,7 @@
       "lanzamiento": "18 de diciembre de 2009",
       "anio": 2009,
       "descripcion": "Un marine parapléjico es enviado a la luna Pandora, donde se une a los Na'vi y lucha para salvar su mundo.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/avatar.jpg",
+      "imagen": "assets/images/avatar.jpg",
       "valoracion": 8.8,
       "opiniones": {
         "opiniones_positivas": {
@@ -488,6 +497,7 @@
     {
       "id": "MOV009",
       "titulo": "Pulp Fiction",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Crimen",
         "Drama"
@@ -500,7 +510,7 @@
       "lanzamiento": "14 de octubre de 1994",
       "anio": 1994,
       "descripcion": "Varias historias de criminales entrelazadas en un mundo lleno de violencia, humor negro y diálogos memorables.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/pulp_fiction.jpg",
+      "imagen": "assets/images/pulp_fiction.jpeg",
       "valoracion": 9.6,
       "opiniones": {
         "opiniones_positivas": {
@@ -545,6 +555,7 @@
     {
       "id": "MOV010",
       "titulo": "Forrest Gump",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Drama",
         "Comedia"
@@ -557,7 +568,7 @@
       "lanzamiento": "6 de julio de 1994",
       "anio": 1994,
       "descripcion": "La extraordinaria vida de Forrest Gump, un hombre con un bajo coeficiente intelectual que impacta eventos históricos del siglo XX.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/forrest_gump.jpg",
+      "imagen": "assets/images/forrest_gump.jpeg",
       "valoracion": 9.2,
       "opiniones": {
         "opiniones_positivas": {
@@ -602,6 +613,7 @@
     {
       "id": "MOV011",
       "titulo": "El Señor de los Anillos: La Comunidad del Anillo",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Fantasía",
         "Aventura"
@@ -614,7 +626,7 @@
       "lanzamiento": "19 de diciembre de 2001",
       "anio": 2001,
       "descripcion": "Un joven hobbit emprende un viaje épico para destruir un anillo mágico que podría traer la destrucción al mundo.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/lotr_comunidad.jpg",
+      "imagen": "assets/images/anillos.jpg",
       "valoracion": 9.7,
       "opiniones": {
         "opiniones_positivas": {
@@ -659,6 +671,7 @@
     {
       "id": "MOV012",
       "titulo": "Star Wars: Episodio V - El Imperio Contraataca",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Ciencia Ficción",
         "Aventura"
@@ -671,7 +684,7 @@
       "lanzamiento": "21 de mayo de 1980",
       "anio": 1980,
       "descripcion": "Los rebeldes luchan contra el Imperio Galáctico mientras Luke Skywalker recibe entrenamiento Jedi y descubre su verdadero origen.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/star_wars_v.jpg",
+      "imagen": "assets/images/star_w.jpeg",
       "valoracion": 9.4,
       "opiniones": {
         "opiniones_positivas": {
@@ -716,6 +729,7 @@
     {
       "id": "MOV013",
       "titulo": "Jurassic Park",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Aventura",
         "Ciencia Ficción"
@@ -728,7 +742,7 @@
       "lanzamiento": "11 de junio de 1993",
       "anio": 1993,
       "descripcion": "Un parque temático de dinosaurios clonados se convierte en un caos cuando las criaturas se escapan y amenazan a los visitantes.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/jurassic_park.jpg",
+      "imagen": "assets/images/jurassic_world.jpeg",
       "valoracion": 8.9,
       "opiniones": {
         "opiniones_positivas": {
@@ -773,6 +787,8 @@
     {
       "id": "MOV014",
       "titulo": "Titanic",
+      "trailer": "RV9L7ui9Cn8",
+
       "genero": [
         "Romance",
         "Drama"
@@ -785,7 +801,7 @@
       "lanzamiento": "19 de diciembre de 1997",
       "anio": 1997,
       "descripcion": "Una trágica historia de amor entre un joven artista y una rica heredera a bordo del Titanic, que choca contra un iceberg.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/titanic.jpg",
+      "imagen": "assets/images/titanic.jpeg",
       "valoracion": 9.1,
       "opiniones": {
         "opiniones_positivas": {
@@ -830,6 +846,7 @@
     {
       "id": "MOV015",
       "titulo": "Toy Story",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Animación",
         "Aventura"
@@ -842,7 +859,7 @@
       "lanzamiento": "22 de noviembre de 1995",
       "anio": 1995,
       "descripcion": "Los juguetes de un niño cobran vida cuando no hay humanos alrededor y se embarcan en aventuras increíbles.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/toy_story.jpg",
+      "imagen": "assets/images/toy_store.jpg",
       "valoracion": 9.3,
       "opiniones": {
         "opiniones_positivas": {
@@ -887,6 +904,7 @@
     {
       "id": "MOV016",
       "titulo": "Inglourious Basterds",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Acción",
         "Drama",
@@ -900,7 +918,7 @@
       "lanzamiento": "21 de agosto de 2009",
       "anio": 2009,
       "descripcion": "Un grupo de soldados judíos-americanos planea asesinar a altos oficiales nazis durante la Segunda Guerra Mundial en la Francia ocupada.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/inglourious_basterds.jpg",
+      "imagen": "assets/images/inglourious_basterds.jpg",
       "valoracion": 8.8,
       "opiniones": {
         "opiniones_positivas": {
@@ -945,6 +963,7 @@
     {
       "id": "MOV017",
       "titulo": "Mad Max: Fury Road",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Acción",
         "Aventura"
@@ -957,7 +976,7 @@
       "lanzamiento": "15 de mayo de 2015",
       "anio": 2015,
       "descripcion": "En un desierto postapocalíptico, Max se une a una rebelde llamada Furiosa para escapar de un tirano y restaurar el orden en el caos.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/mad_max_fury_road.jpg",
+      "imagen": "assets/images/mad_max.jpg",
       "valoracion": 9.1,
       "opiniones": {
         "opiniones_positivas": {
@@ -1002,6 +1021,7 @@
     {
       "id": "MOV018",
       "titulo": "The Social Network",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Drama",
         "Biografía"
@@ -1014,7 +1034,7 @@
       "lanzamiento": "1 de octubre de 2010",
       "anio": 2010,
       "descripcion": "La historia de cómo Mark Zuckerberg creó Facebook y las luchas legales y personales que surgieron a partir de su éxito.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/social_network.jpg",
+      "imagen": "assets/images/The_Social_Network.png",
       "valoracion": 8.5,
       "opiniones": {
         "opiniones_positivas": {
@@ -1059,6 +1079,7 @@
     {
       "id": "MOV019",
       "titulo": "Coco",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Animación",
         "Aventura"
@@ -1071,7 +1092,7 @@
       "lanzamiento": "22 de noviembre de 2017",
       "anio": 2017,
       "descripcion": "Un joven músico se embarca en una extraordinaria aventura en la Tierra de los Muertos para descubrir la verdad sobre su familia.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/coco.jpg",
+      "imagen": "assets/images/coco.jpeg",
       "valoracion": 9.3,
       "opiniones": {
         "opiniones_positivas": {
@@ -1116,6 +1137,7 @@
     {
       "id": "MOV020",
       "titulo": "Blade Runner 2049",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Ciencia Ficción",
         "Thriller"
@@ -1128,7 +1150,7 @@
       "lanzamiento": "6 de octubre de 2017",
       "anio": 2017,
       "descripcion": "Un oficial busca respuestas sobre su propia identidad mientras desvela un secreto que podría cambiar el futuro de la humanidad.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/blade_runner_2049.jpg",
+      "imagen": "assets/images/blade_runner.jpg",
       "valoracion": 8.6,
       "opiniones": {
         "opiniones_positivas": {
@@ -1173,6 +1195,7 @@
     {
       "id": "MOV021",
       "titulo": "Black Panther",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Acción",
         "Ciencia Ficción",
@@ -1186,7 +1209,7 @@
       "lanzamiento": "16 de febrero de 2018",
       "anio": 2018,
       "descripcion": "T'Challa, el rey de Wakanda, debe defender su reino de un adversario que pone en peligro el destino del mundo.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/black_panther.jpg",
+      "imagen": "assets/images/black_panther.webp",
       "valoracion": 8.4,
       "opiniones": {
         "opiniones_positivas": {
@@ -1231,6 +1254,7 @@
     {
       "id": "MOV022",
       "titulo": "The Dark Knight Rises",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Acción",
         "Superhéroes"
@@ -1243,7 +1267,7 @@
       "lanzamiento": "20 de julio de 2012",
       "anio": 2012,
       "descripcion": "Batman debe enfrentar una nueva amenaza, el terrorista Bane, que pone a Gotham City al borde de la destrucción.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/dark_knight_rises.jpg",
+      "imagen": "assets/images/the_dark_knight.jpg",
       "valoracion": 8.7,
       "opiniones": {
         "opiniones_positivas": {
@@ -1288,6 +1312,7 @@
     {
       "id": "MOV023",
       "titulo": "The Revenant",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Drama",
         "Aventura"
@@ -1300,7 +1325,7 @@
       "lanzamiento": "25 de diciembre de 2015",
       "anio": 2015,
       "descripcion": "Un explorador lucha por sobrevivir después de ser atacado por un oso y ser dejado por muerto por su equipo de expedición.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/the_revenant.jpg",
+      "imagen": "assets/images/the_revenant.jpeg",
       "valoracion": 8.9,
       "opiniones": {
         "opiniones_positivas": {
@@ -1345,6 +1370,7 @@
     {
       "id": "MOV024",
       "titulo": "Bohemian Rhapsody",
+      "trailer": "https://www.youtube.com/watch?v=RV9L7ui9Cn8",
       "genero": [
         "Drama",
         "Biografía",
@@ -1358,7 +1384,7 @@
       "lanzamiento": "2 de noviembre de 2018",
       "anio": 2018,
       "descripcion": "La historia de la legendaria banda Queen y su icónico vocalista Freddie Mercury.",
-      "imagen": "https://raw.githubusercontent.com/jritsqmet/web-api/main/assets/images/api-peliculas/bohemian_rhapsody.jpg",
+      "imagen": "assets/images/bohemian_rhapsody.jpg",
       "valoracion": 8.6,
       "opiniones": {
         "opiniones_positivas": {
