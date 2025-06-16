@@ -232,7 +232,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       drawer: Drawer(
-        backgroundColor: Colors.black,
+        backgroundColor: const Color.fromARGB(255, 141, 137, 137),
         child: Column(
           children: [
             DrawerHeader(
