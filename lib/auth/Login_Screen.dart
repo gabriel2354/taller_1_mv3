@@ -9,7 +9,6 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final emailController = TextEditingController();
     final passwordController = TextEditingController();
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Iniciar Sesión'),
@@ -55,7 +54,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 onPressed: () {
                   // Solo llama la función, sin navegar aquí
-                    loginFire(
+                  loginFire(
                     emailController.text,
                     passwordController.text,
                     context,
@@ -79,7 +78,11 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
-Future<void> loginFire(String correo, String contrasenia, BuildContext context) async {
+Future<void> loginFire(
+  String correo,
+  String contrasenia,
+  BuildContext context,
+) async {
   // Validar si los campos están vacíos
   if (correo.isEmpty || contrasenia.isEmpty) {
     showDialog(
@@ -128,7 +131,6 @@ Future<void> loginFire(String correo, String contrasenia, BuildContext context) 
         ),
       );
     }
-
   } on FirebaseAuthException catch (e) {
     String mensaje = '';
     if (e.code == 'user-not-found') {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:taller_1_mv3/screens/EditarPerfilScreens.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -47,7 +48,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 radius: 60,
                 backgroundImage: user?.photoURL != null
                     ? NetworkImage(user!.photoURL!)
-                    : const AssetImage('assets/images/welcome.jpeg') as ImageProvider,
+                    : const AssetImage('assets/images/welcome.jpeg')
+                          as ImageProvider,
               ),
             ),
             const SizedBox(height: 16),
@@ -61,10 +63,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
             Card(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
               elevation: 4,
               child: ListTile(
-                leading: const Icon(Icons.verified_user, color: Colors.deepPurple),
+                leading: const Icon(
+                  Icons.verified_user,
+                  color: Colors.deepPurple,
+                ),
                 title: const Text("Membresía"),
                 subtitle: const Text("Premium - Activa"),
                 trailing: const Icon(Icons.arrow_forward_ios, size: 16),
@@ -73,7 +80,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 10),
             Card(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
               elevation: 4,
               child: Column(
                 children: const [
@@ -90,7 +99,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => EditarPerfil()),
+                );
+              },
               icon: const Icon(Icons.edit),
               label: const Text("Editar Perfil"),
               style: ElevatedButton.styleFrom(
@@ -98,6 +112,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 minimumSize: const Size(double.infinity, 50),
               ),
             ),
+
             const SizedBox(height: 10),
             OutlinedButton.icon(
               onPressed: () async {
@@ -120,7 +135,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Configuración'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Configuración',
+          ),
         ],
       ),
     );
