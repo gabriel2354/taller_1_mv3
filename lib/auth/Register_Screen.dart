@@ -1,13 +1,17 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:taller_1_mv3/auth/login_screen.dart'; // Ajusta esta importación según tu estructura
-
+import 'package:image_picker/image_picker.dart';
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
 
   @override
   State<RegisterScreen> createState() => _RegisterScreenState();
+  
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
@@ -16,6 +20,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _contrasenia = TextEditingController();
   final TextEditingController _edad = TextEditingController();
   final TextEditingController _celular = TextEditingController();
+  String? urlImagenSubida;
+
+  XFile? imagen;
+  void cambiarImagen(XFile nuevaImagen) {
+    setState(() {
+      imagen = nuevaImagen;
+    });
+  }
+
+
 
   @override
   void dispose() {
@@ -67,6 +81,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
         'correo': correo,
         'edad': edad,
         'celular': celular,
+          'foto': urlImagenSubida,
+
       });
 
       // Mostrar diálogo éxito y navegar a login
@@ -121,97 +137,184 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Registrarse'),
-        backgroundColor: Colors.deepPurple,
-        centerTitle: true,
+ @override
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Registrarse'),
+      backgroundColor: Colors.deepPurple,
+      centerTitle: true,
+    ),
+    body: SingleChildScrollView(
+      padding: const EdgeInsets.all(24.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(height: 20),
+          const Text(
+            'Crea tu cuenta',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 16),
+
+          TextField(
+            controller: _nombre,
+            decoration: const InputDecoration(
+              labelText: 'Nombre de usuario',
+              prefixIcon: Icon(Icons.person),
+              border: OutlineInputBorder(),
+            ),
+          ),
+
+          const SizedBox(height: 16),
+
+          TextField(
+            controller: _celular,
+            decoration: const InputDecoration(
+              labelText: 'Celular',
+              prefixIcon: Icon(Icons.phone),
+              border: OutlineInputBorder(),
+            ),
+            keyboardType: TextInputType.phone,
+          ),
+
+          const SizedBox(height: 16),
+
+          TextField(
+            controller: _edad,
+            decoration: const InputDecoration(
+              labelText: 'Edad',
+              prefixIcon: Icon(Icons.cake),
+              border: OutlineInputBorder(),
+            ),
+            keyboardType: TextInputType.number,
+          ),
+
+          const SizedBox(height: 16),
+
+          TextField(
+            controller: _correo,
+            decoration: const InputDecoration(
+              labelText: 'Correo electrónico',
+              prefixIcon: Icon(Icons.email),
+              border: OutlineInputBorder(),
+            ),
+            keyboardType: TextInputType.emailAddress,
+          ),
+
+          const SizedBox(height: 16),
+
+          TextField(
+            controller: _contrasenia,
+            obscureText: true,
+            decoration: const InputDecoration(
+              labelText: 'Contraseña',
+              prefixIcon: Icon(Icons.lock),
+              border: OutlineInputBorder(),
+            ),
+          ),
+
+          const SizedBox(height: 32),
+          const Divider(thickness: 2),
+          const SizedBox(height: 16),
+
+          const Text(
+            "Selecciona una imagen",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+
+          const SizedBox(height: 16),
+
+          Row(
+            children: [
+              FilledButton.icon(
+                onPressed: () => abrirGaleria(cambiarImagen),
+                label: const Text("Galería"),
+                icon: const Icon(Icons.landscape_sharp),
+              ),
+              const SizedBox(width: 8),
+              FilledButton.icon(
+                onPressed: () => abrirCamara(cambiarImagen),
+                label: const Text("Cámara"),
+                icon: const Icon(Icons.camera),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 16),
+
+        urlImagenSubida == null
+  ? const Text("No hay imagen seleccionada")
+  : Image.network(urlImagenSubida!),
+
+
+          const SizedBox(height: 16),
+
+        FilledButton.icon(
+  onPressed: () async {
+    if (imagen != null) {
+      final url = await subirImagen(imagen!);
+      setState(() {
+        urlImagenSubida = url;
+      });
+    }
+  },
+  label: const Text("SUBIR IMAGEN"),
+  icon: const Icon(Icons.abc_rounded),
+),
+
+
+          const SizedBox(height: 24),
+
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                backgroundColor: Colors.deepPurple,
+              ),
+              onPressed: registrarse,
+              child: const Text("Registrarse"),
+            ),
+          ),
+        ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
-          children: [
-            const SizedBox(height: 20),
-            const Text(
-              'Crea tu cuenta',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 16),
+    ),
+  );
+}
 
-            TextField(
-              controller: _nombre,
-              decoration: const InputDecoration(
-                labelText: 'Nombre de usuario',
-                prefixIcon: Icon(Icons.person),
-                border: OutlineInputBorder(),
-              ),
-            ),
+}
 
-            const SizedBox(height: 16),
 
-            TextField(
-              controller: _celular,
-              decoration: const InputDecoration(
-                labelText: 'Celular',
-                prefixIcon: Icon(Icons.phone),
-                border: OutlineInputBorder(),
-              ),
-              keyboardType: TextInputType.phone,
-            ),
+Future<void> abrirGaleria(Function _cambiarImagen) async {
+  final imganSelecionada = await ImagePicker().pickImage(
+    source: ImageSource.gallery,
+  );
+  _cambiarImagen(imganSelecionada);
+}
 
-            const SizedBox(height: 16),
-
-            TextField(
-              controller: _edad,
-              decoration: const InputDecoration(
-                labelText: 'Edad',
-                prefixIcon: Icon(Icons.cake),
-                border: OutlineInputBorder(),
-              ),
-              keyboardType: TextInputType.number,
-            ),
-
-            const SizedBox(height: 16),
-
-            TextField(
-              controller: _correo,
-              decoration: const InputDecoration(
-                labelText: 'Correo electrónico',
-                prefixIcon: Icon(Icons.email),
-                border: OutlineInputBorder(),
-              ),
-              keyboardType: TextInputType.emailAddress,
-            ),
-
-            const SizedBox(height: 16),
-
-            TextField(
-              controller: _contrasenia,
-              obscureText: true,
-              decoration: const InputDecoration(
-                labelText: 'Contraseña',
-                prefixIcon: Icon(Icons.lock),
-                border: OutlineInputBorder(),
-              ),
-            ),
-
-            const SizedBox(height: 24),
-
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                  backgroundColor: Colors.deepPurple,
-                ),
-                onPressed: registrarse,
-                child: const Text("Registro"),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+Future<void> abrirCamara(Function _cambiarImagen) async {
+  final imagenSeleccionada = await ImagePicker().pickImage(
+    source: ImageSource.camera,
+  );
+  if (imagenSeleccionada != null) {
+    _cambiarImagen(imagenSeleccionada);
   }
+}
+
+Future<String?> subirImagen(XFile imagen) async {
+  final supabase = Supabase.instance.client;
+  final avatarFile = File(imagen.path);
+
+  final String filePath = 'public/avatar1.png';
+
+  await supabase.storage.from('personajes').upload(
+    filePath,
+    avatarFile,
+    fileOptions: const FileOptions(cacheControl: '3600', upsert: true),
+  );
+
+  final String publicUrl = supabase.storage.from('personajes').getPublicUrl(filePath);
+  return publicUrl;
 }

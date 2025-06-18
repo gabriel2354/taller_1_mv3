@@ -1,5 +1,7 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:taller_1_mv3/auth/Register_Screen.dart';
 import 'package:taller_1_mv3/screens/EditarPerfilScreens.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -11,6 +13,26 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   int _currentIndex = 1;
+
+  String? nombreUsuario;
+
+  String? urlImagenSubida;
+
+  Future<void> obtenerNombreUsuario() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      final uid = user.uid;
+      final snapshot = await FirebaseDatabase.instance
+          .ref('usuarios/$uid')
+          .get();
+      if (snapshot.exists) {
+        final data = snapshot.value as Map<dynamic, dynamic>;
+        setState(() {
+          nombreUsuario = data['nombre']?.toString() ?? 'Usuario';
+        });
+      }
+    }
+  }
 
   void _onBottomTap(int index) {
     if (_currentIndex == index) return;
@@ -30,6 +52,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    obtenerNombreUsuario();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser;
 
@@ -46,15 +74,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Center(
               child: CircleAvatar(
                 radius: 60,
-                backgroundImage: user?.photoURL != null
-                    ? NetworkImage(user!.photoURL!)
+                backgroundImage: urlImagenSubida != null
+                    ? NetworkImage(urlImagenSubida!)
                     : const AssetImage('assets/images/welcome.jpeg')
                           as ImageProvider,
               ),
             ),
+
             const SizedBox(height: 16),
             Text(
-              user?.displayName ?? 'Usuario',
+              nombreUsuario ?? 'Usuario',
               style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
             Text(
