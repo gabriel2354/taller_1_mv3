@@ -18,22 +18,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   String? urlImagenSubida;
 
-  Future<void> obtenerNombreUsuario() async {
-    final user = FirebaseAuth.instance.currentUser;
-    if (user != null) {
-      final uid = user.uid;
-      final snapshot = await FirebaseDatabase.instance
-          .ref('usuarios/$uid')
-          .get();
-      if (snapshot.exists) {
-        final data = snapshot.value as Map<dynamic, dynamic>;
-        setState(() {
-          nombreUsuario = data['nombre']?.toString() ?? 'Usuario';
-        });
-      }
+Future<void> obtenerNombreUsuario() async {
+  final user = FirebaseAuth.instance.currentUser;
+  if (user != null) {
+    final uid = user.uid;
+    final snapshot = await FirebaseDatabase.instance.ref('usuarios/$uid').get();
+    if (snapshot.exists) {
+      final data = snapshot.value as Map<dynamic, dynamic>;
+      setState(() {
+        nombreUsuario = data['nombre']?.toString() ?? 'Usuario';
+        urlImagenSubida = data['foto']?.toString(); 
+      });
     }
   }
-
+}
   void _onBottomTap(int index) {
     if (_currentIndex == index) return;
 

@@ -62,7 +62,6 @@ class _PeliculaDetailScreenState extends State<PeliculaDetailScreen> {
         builder: (_) => FullScreenPlayer(controller: _videoController),
       ),
     );
-    // Vuelve a mostrar los controles después de volver
     _startAutoHideTimer();
   }
 

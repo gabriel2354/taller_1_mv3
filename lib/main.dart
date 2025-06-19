@@ -15,8 +15,9 @@ Future<void> main() async {
 
   await Supabase.initialize(
     url: 'https://kgudsdateszjxkgcvhnv.supabase.co',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtndWRzZGF0ZXN6anhrZ2N2aG52Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2ODQ0NzksImV4cCI6MjA2NTI2MDQ3OX0.z3HoewlQUCQkEUDEXPvU9KUq14SKjO6dYItMnIy2vM8',
-);
+    anonKey:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtndWRzZGF0ZXN6anhrZ2N2aG52Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2ODQ0NzksImV4cCI6MjA2NTI2MDQ3OX0.z3HoewlQUCQkEUDEXPvU9KUq14SKjO6dYItMnIy2vM8',
+  );
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,

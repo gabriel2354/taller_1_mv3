@@ -37,7 +37,7 @@ class _EditarPerfilState extends State<EditarPerfil> {
     final snapshot = await ref.get();
     if (snapshot.exists) {
       final data = snapshot.value as Map;
-      print('Datos cargados: $data'); // Para depuración en consola
+      print('Datos cargados: $data');
       setState(() {
         _nombreController.text = data['nombre'] ?? '';
         _edadController.text = data['edad'] ?? '';
@@ -71,8 +71,11 @@ class _EditarPerfilState extends State<EditarPerfil> {
   }
 
   Future<void> cambiarCorreo() async {
-    if (_nuevoCorreoController.text.isEmpty || _passwordReauthController.text.isEmpty) {
-      mostrarMensaje("Por favor ingresa tu contraseña actual y el nuevo correo.");
+    if (_nuevoCorreoController.text.isEmpty ||
+        _passwordReauthController.text.isEmpty) {
+      mostrarMensaje(
+        "Por favor ingresa tu contraseña actual y el nuevo correo.",
+      );
       return;
     }
 
@@ -81,7 +84,6 @@ class _EditarPerfilState extends State<EditarPerfil> {
       await currentUser.updateEmail(_nuevoCorreoController.text.trim());
       _correoController.text = _nuevoCorreoController.text.trim();
 
-      // Actualiza también en Realtime Database para mantener datos sincronizados
       final ref = FirebaseDatabase.instance.ref("usuarios/$uid");
       await ref.update({"correo": _correoController.text});
 
@@ -99,8 +101,11 @@ class _EditarPerfilState extends State<EditarPerfil> {
   }
 
   Future<void> cambiarContrasena() async {
-    if (_nuevaContrasenaController.text.isEmpty || _passwordReauthController.text.isEmpty) {
-      mostrarMensaje("Por favor ingresa tu contraseña actual y la nueva contraseña.");
+    if (_nuevaContrasenaController.text.isEmpty ||
+        _passwordReauthController.text.isEmpty) {
+      mostrarMensaje(
+        "Por favor ingresa tu contraseña actual y la nueva contraseña.",
+      );
       return;
     }
 
@@ -119,7 +124,9 @@ class _EditarPerfilState extends State<EditarPerfil> {
   }
 
   Future<void> eliminarCuenta() async {
-    bool confirmar = await mostrarConfirmacion("¿Estás seguro de eliminar tu cuenta? Esta acción no se puede deshacer.");
+    bool confirmar = await mostrarConfirmacion(
+      "¿Estás seguro de eliminar tu cuenta? Esta acción no se puede deshacer.",
+    );
     if (!confirmar) return;
 
     try {
@@ -141,7 +148,7 @@ class _EditarPerfilState extends State<EditarPerfil> {
           TextButton(
             child: const Text("OK"),
             onPressed: () => Navigator.pop(context),
-          )
+          ),
         ],
       ),
     );
@@ -175,7 +182,6 @@ class _EditarPerfilState extends State<EditarPerfil> {
     return resultado;
   }
 
-  // Función para resetear el nombre a un valor fijo para probar
   Future<void> resetearNombreDePrueba() async {
     final ref = FirebaseDatabase.instance.ref("usuarios/$uid");
     await ref.update({"nombre": "Nombre de prueba"});
@@ -188,12 +194,14 @@ class _EditarPerfilState extends State<EditarPerfil> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Editar Perfil"), backgroundColor: Colors.deepPurple),
+      appBar: AppBar(
+        title: const Text("Editar Perfil"),
+        backgroundColor: Colors.deepPurple,
+      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            // Datos básicos
             TextField(
               controller: _nombreController,
               decoration: const InputDecoration(labelText: "Nombre"),
@@ -221,7 +229,6 @@ class _EditarPerfilState extends State<EditarPerfil> {
             ),
             const SizedBox(height: 12),
 
-            // Botón para resetear el nombre a prueba
             ElevatedButton(
               onPressed: resetearNombreDePrueba,
               child: const Text("Resetear nombre a prueba"),
@@ -233,13 +240,16 @@ class _EditarPerfilState extends State<EditarPerfil> {
 
             const SizedBox(height: 24),
 
-            // Botón para mostrar cambiar correo
             Align(
               alignment: Alignment.centerLeft,
               child: TextButton(
-                onPressed: () => setState(() => mostrarCambiarCorreo = !mostrarCambiarCorreo),
+                onPressed: () => setState(
+                  () => mostrarCambiarCorreo = !mostrarCambiarCorreo,
+                ),
                 child: Text(
-                  mostrarCambiarCorreo ? "Cancelar cambio de correo" : "Cambiar correo",
+                  mostrarCambiarCorreo
+                      ? "Cancelar cambio de correo"
+                      : "Cambiar correo",
                   style: const TextStyle(fontSize: 14),
                 ),
               ),
@@ -253,13 +263,17 @@ class _EditarPerfilState extends State<EditarPerfil> {
                   TextField(
                     controller: _nuevoCorreoController,
                     keyboardType: TextInputType.emailAddress,
-                    decoration: const InputDecoration(labelText: "Nuevo correo"),
+                    decoration: const InputDecoration(
+                      labelText: "Nuevo correo",
+                    ),
                   ),
                   const SizedBox(height: 8),
                   TextField(
                     controller: _passwordReauthController,
                     obscureText: true,
-                    decoration: const InputDecoration(labelText: "Contraseña actual"),
+                    decoration: const InputDecoration(
+                      labelText: "Contraseña actual",
+                    ),
                   ),
                   const SizedBox(height: 8),
                   ElevatedButton(
@@ -276,13 +290,16 @@ class _EditarPerfilState extends State<EditarPerfil> {
               ),
             ),
 
-            // Botón para mostrar cambiar contraseña
             Align(
               alignment: Alignment.centerLeft,
               child: TextButton(
-                onPressed: () => setState(() => mostrarCambiarContrasena = !mostrarCambiarContrasena),
+                onPressed: () => setState(
+                  () => mostrarCambiarContrasena = !mostrarCambiarContrasena,
+                ),
                 child: Text(
-                  mostrarCambiarContrasena ? "Cancelar cambio de contraseña" : "Cambiar contraseña",
+                  mostrarCambiarContrasena
+                      ? "Cancelar cambio de contraseña"
+                      : "Cambiar contraseña",
                   style: const TextStyle(fontSize: 14),
                 ),
               ),
@@ -296,13 +313,17 @@ class _EditarPerfilState extends State<EditarPerfil> {
                   TextField(
                     controller: _nuevaContrasenaController,
                     obscureText: true,
-                    decoration: const InputDecoration(labelText: "Nueva contraseña"),
+                    decoration: const InputDecoration(
+                      labelText: "Nueva contraseña",
+                    ),
                   ),
                   const SizedBox(height: 8),
                   TextField(
                     controller: _passwordReauthController,
                     obscureText: true,
-                    decoration: const InputDecoration(labelText: "Contraseña actual"),
+                    decoration: const InputDecoration(
+                      labelText: "Contraseña actual",
+                    ),
                   ),
                   const SizedBox(height: 8),
                   ElevatedButton(

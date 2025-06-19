@@ -23,7 +23,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
         Navigator.pushReplacementNamed(context, '/profile');
         break;
       case 2:
-        // Ya estás en Configuración
         break;
     }
   }

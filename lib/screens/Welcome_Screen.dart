@@ -16,7 +16,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
 
-          // Filtro oscuro
+
           Container(
             color: Colors.black.withOpacity(0.6),
           ),
