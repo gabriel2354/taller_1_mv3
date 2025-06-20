@@ -294,23 +294,27 @@ Future<void> abrirCamara(Function _cambiarImagen) async {
 Future<String?> subirImagen(XFile imagen) async {
   try {
     final supabase = Supabase.instance.client;
-    final avatarFile = File(imagen.path);
-    final fileExt = p.extension(avatarFile.path);
+    final fileExt = p.extension(imagen.path);
     final fileName = 'avatar_${DateTime.now().millisecondsSinceEpoch}$fileExt';
     final filePath = 'public/$fileName';
 
+    // ✅ Leer imagen como bytes (compatible con móvil y web)
+    final bytes = await imagen.readAsBytes();
+
+    // ✅ Subir con uploadBinary
     await supabase.storage
         .from('usuario')
-        .upload(
+        .uploadBinary(
           filePath,
-          avatarFile,
+          bytes,
           fileOptions: const FileOptions(cacheControl: '3600', upsert: false),
         );
 
     final publicUrl = supabase.storage.from('usuario').getPublicUrl(filePath);
+    print('✅ Imagen subida: $publicUrl');
     return publicUrl;
   } catch (e) {
-    print("Error al subir imagen: $e");
+    print('❌ Error al subir imagen: $e');
     return null;
   }
 }
