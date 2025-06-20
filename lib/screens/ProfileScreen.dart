@@ -1,6 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:taller_1_mv3/auth/Register_Screen.dart';
 import 'package:taller_1_mv3/screens/EditarPerfilScreens.dart';
 
@@ -13,25 +13,27 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   int _currentIndex = 1;
-
   String? nombreUsuario;
-
   String? urlImagenSubida;
 
-Future<void> obtenerNombreUsuario() async {
-  final user = FirebaseAuth.instance.currentUser;
-  if (user != null) {
-    final uid = user.uid;
-    final snapshot = await FirebaseDatabase.instance.ref('usuarios/$uid').get();
-    if (snapshot.exists) {
-      final data = snapshot.value as Map<dynamic, dynamic>;
-      setState(() {
-        nombreUsuario = data['nombre']?.toString() ?? 'Usuario';
-        urlImagenSubida = data['foto']?.toString(); 
-      });
+  Future<void> obtenerNombreUsuario() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      final uid = user.uid;
+      final snapshot = await FirebaseDatabase.instance.ref('usuarios/$uid').get();
+
+      if (!mounted) return; // ✅ Evita el error de setState() después del dispose
+
+      if (snapshot.exists) {
+        final data = snapshot.value as Map<dynamic, dynamic>;
+        setState(() {
+          nombreUsuario = data['nombre']?.toString() ?? 'Usuario';
+          urlImagenSubida = data['foto']?.toString();
+        });
+      }
     }
   }
-}
+
   void _onBottomTap(int index) {
     if (_currentIndex == index) return;
 
@@ -58,69 +60,77 @@ Future<void> obtenerNombreUsuario() async {
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser;
+    final theme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: theme.scaffoldBackgroundColor,
       appBar: AppBar(
         title: const Text('Mi Perfil'),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: theme.primaryColor,
+        elevation: 0,
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Center(
               child: CircleAvatar(
-                radius: 60,
+                radius: 55,
                 backgroundImage: urlImagenSubida != null
                     ? NetworkImage(urlImagenSubida!)
-                    : const AssetImage('assets/images/welcome.jpeg')
-                          as ImageProvider,
+                    : const AssetImage('assets/images/welcome.jpeg') as ImageProvider,
+                backgroundColor: Colors.grey[300],
               ),
             ),
-
-            const SizedBox(height: 16),
+            const SizedBox(height: 12),
             Text(
               nombreUsuario ?? 'Usuario',
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+                color: theme.textTheme.bodyLarge?.color,
+              ),
             ),
             Text(
               user?.email ?? 'correo@desconocido.com',
-              style: const TextStyle(fontSize: 16, color: Colors.grey),
+              style: TextStyle(
+                fontSize: 15,
+                color: theme.textTheme.bodySmall?.color?.withOpacity(0.7),
+              ),
             ),
             const SizedBox(height: 20),
             Card(
+              color: theme.cardColor,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-              elevation: 4,
+              elevation: 3,
               child: ListTile(
-                leading: const Icon(
-                  Icons.verified_user,
-                  color: Colors.deepPurple,
-                ),
-                title: const Text("Membresía"),
-                subtitle: const Text("Premium - Activa"),
+                leading: Icon(Icons.verified_user, color: theme.primaryColor),
+                title: Text("Membresía", style: theme.textTheme.titleMedium),
+                subtitle: Text("Premium - Activa", style: theme.textTheme.bodySmall),
                 trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                 onTap: () {},
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 12),
             Card(
+              color: theme.cardColor,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-              elevation: 4,
+              elevation: 3,
               child: Column(
-                children: const [
+                children: [
                   ListTile(
-                    leading: Icon(Icons.movie, color: Colors.deepPurple),
-                    title: Text("Historial de Películas"),
+                    leading: Icon(Icons.movie, color: theme.primaryColor),
+                    title: Text("Historial de Películas", style: theme.textTheme.titleMedium),
                   ),
-                  Divider(height: 1),
-                  ListTile(title: Text("• Origen")),
-                  ListTile(title: Text("• Interstellar")),
-                  ListTile(title: Text("• El Padrino")),
+                  Divider(height: 1, color: theme.dividerColor),
+                  ListTile(title: Text("• Origen", style: theme.textTheme.bodyMedium)),
+                  ListTile(title: Text("• Interstellar", style: theme.textTheme.bodyMedium)),
+                  ListTile(title: Text("• El Padrino", style: theme.textTheme.bodyMedium)),
                 ],
               ),
             ),
@@ -132,24 +142,30 @@ Future<void> obtenerNombreUsuario() async {
                   MaterialPageRoute(builder: (context) => EditarPerfil()),
                 );
               },
-              icon: const Icon(Icons.edit),
-              label: const Text("Editar Perfil"),
+              icon: const Icon(Icons.edit, color: Colors.white),
+              label: const Text("Editar Perfil", style: TextStyle(color: Colors.white)),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 209, 206, 214),
-                minimumSize: const Size(double.infinity, 50),
+                backgroundColor: theme.primaryColor,
+                minimumSize: const Size(double.infinity, 48),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
             ),
-
             const SizedBox(height: 10),
             OutlinedButton.icon(
               onPressed: () async {
                 await FirebaseAuth.instance.signOut();
                 Navigator.pushReplacementNamed(context, '/');
               },
-              icon: const Icon(Icons.logout),
-              label: const Text("Cerrar Sesión"),
+              icon: Icon(Icons.logout, color: theme.primaryColor),
+              label: Text("Cerrar Sesión", style: TextStyle(color: theme.primaryColor)),
               style: OutlinedButton.styleFrom(
-                minimumSize: const Size(double.infinity, 50),
+                side: BorderSide(color: theme.primaryColor),
+                minimumSize: const Size(double.infinity, 48),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
             ),
           ],
@@ -157,15 +173,12 @@ Future<void> obtenerNombreUsuario() async {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        selectedItemColor: Colors.deepPurple,
+        selectedItemColor: theme.primaryColor,
         onTap: _onBottomTap,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Configuración',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Configuración'),
         ],
       ),
     );

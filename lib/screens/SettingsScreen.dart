@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../providers/theme_provider.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -22,13 +24,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
       case 1:
         Navigator.pushReplacementNamed(context, '/profile');
         break;
-      case 2:
-        break;
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    final isDark = themeProvider.themeMode == ThemeMode.dark;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Configuraciones'),
@@ -42,25 +45,27 @@ class _SettingsScreenState extends State<SettingsScreen> {
             title: const Text("Notificaciones"),
             value: true,
             onChanged: (bool value) {
-              // Aquí puedes manejar el estado real si lo deseas
+              // Puedes guardar el estado si deseas
+            },
+          ),
+          SwitchListTile(
+            title: const Text("Modo oscuro"),
+            value: isDark,
+            onChanged: (bool value) {
+              themeProvider.toggleTheme(value);
             },
           ),
           ListTile(
             leading: const Icon(Icons.language),
             title: const Text("Idioma"),
             trailing: const Text("Español"),
-            onTap: () {
-              // Acción futura
-            },
+            onTap: () {},
           ),
           ListTile(
             leading: const Icon(Icons.privacy_tip),
             title: const Text("Privacidad"),
-            onTap: () {
-              // Acción futura
-            },
+            onTap: () {},
           ),
-         
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

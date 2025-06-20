@@ -231,63 +231,90 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      drawer: Drawer(
-        backgroundColor: const Color.fromARGB(255, 141, 137, 137),
-        child: Column(
+     drawer: Drawer(
+  backgroundColor: Colors.white,
+  child: Column(
+    children: [
+      DrawerHeader(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.deepPurple, Colors.deepPurpleAccent],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            DrawerHeader(
-              decoration: const BoxDecoration(color: Colors.deepPurple),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
+            const CircleAvatar(
+              radius: 30,
+              backgroundImage: AssetImage('assets/images/welcome.jpeg'),
+              backgroundColor: Colors.white,
+            ),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const CircleAvatar(
-                    radius: 30,
-                    backgroundImage: AssetImage('assets/images/welcome.jpeg'),
+                  Text(
+                    user?.displayName ?? user?.email ?? 'Usuario',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  const SizedBox(width: 16),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        user?.displayName ?? user?.email ?? 'Usuario',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      const Text(
-                        'Catálogo por Género',
-                        style: TextStyle(color: Colors.white70, fontSize: 14),
-                      ),
-                    ],
+                  const SizedBox(height: 4),
+                  const Text(
+                    'Catálogo por Género',
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 13,
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
                 ],
-              ),
-            ),
-            Expanded(
-              child: ListView.separated(
-                itemCount: _categorias.length,
-                separatorBuilder: (context, index) => const Divider(height: 1, color: Colors.white12),
-                itemBuilder: (context, index) {
-                  final categoria = _categorias[index];
-                  final icono = _iconoPorCategoria(categoria);
-                  return ListTile(
-                    leading: Icon(icono, color: Colors.deepPurple),
-                    title: Text(categoria, style: const TextStyle(color: Colors.white)),
-                    onTap: () {
-                      setState(() => _categoriaSeleccionada = categoria);
-                      Navigator.pop(context);
-                    },
-                  );
-                },
               ),
             ),
           ],
         ),
       ),
+      Expanded(
+        child: ListView.separated(
+          itemCount: _categorias.length,
+          separatorBuilder: (context, index) => const Divider(height: 1, color: Colors.black12),
+          itemBuilder: (context, index) {
+            final categoria = _categorias[index];
+            final icono = _iconoPorCategoria(categoria);
+            final isSelected = _categoriaSeleccionada == categoria;
+
+            return ListTile(
+              leading: Icon(
+                icono,
+                color: isSelected ? Colors.deepPurple : Colors.grey[700],
+              ),
+              title: Text(
+                categoria,
+                style: TextStyle(
+                  color: isSelected ? Colors.deepPurple : Colors.black87,
+                  fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                ),
+              ),
+              onTap: () {
+                setState(() => _categoriaSeleccionada = categoria);
+                Navigator.pop(context);
+              },
+            );
+          },
+        ),
+      ),
+    ],
+  ),
+),
+
       body: peliculasFiltradas.isEmpty
           ? const Center(child: CircularProgressIndicator(color: Colors.deepPurple))
           : GridView.builder(
@@ -347,8 +374,8 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         selectedItemColor: Colors.deepPurple,
-        backgroundColor: Colors.black,
-        unselectedItemColor: Colors.white70,
+        backgroundColor: const Color.fromARGB(255, 246, 244, 244),
+        unselectedItemColor: const Color.fromARGB(179, 7, 7, 7),
         onTap: _onBottomTap,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
